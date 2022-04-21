@@ -1,35 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://kit.fontawesome.com/d3b61aca54.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
-    <title>ToDo App</title>
+	<title>BMI Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-    <h1 style="text-align: center; font-family: 'Poppins', sans-serif;">Todo List</h1>
-    <h1>Add Todo</h1>
-    <span><button onclick="addtodo()"><i class="fa-solid fa-circle-plus"></i></button></span>
-
-    <span><button onclick="closetodo()"><i class="fa-solid fa-xmark"></i></i></button></span>
-    <div id="addtodo">
-        <input id="userip" placeholder="Enter Todo Title" type="text">
-        <button onclick="add()">Add</button>
+    <div class="container">
+    	<div class="panel">
+    		<h2 class="text-center">Check your BMI</h2>
+    		
+    			<p id="introText" class="text-center">Enter your weight and height below to check your BMI results</p>
+    			
+    			<form>
+    				<div id="weightInput">
+    					<p>Put your weight in here (KG)</p>
+    		     		<input id="weight" type="number" pattern="[0-9]*" name="a" />
+    				</div>
+    				<div id="heightInput">
+    					<p>And your height in here (CM)</p>
+	    				 <input id="height" type="number" pattern="[0-9]*" name="b"/> 
+    				</div>
+    		     <button type="button" class="btn" onclick="calculate()">Calculate BMI</button>
+    		</form>
+    		<div id="results" class="text-center">Your BMI results will appear here</div>
+    	</div>
+        <div><img src="https://www.researchgate.net/profile/Arjumand-Warsy-2/publication/6437262/figure/tbl1/AS:601598342488065@1520443630443/Body-mass-index-BMI-in-normal-males-and-females-of-different-groups-BMI-male-BMI.png"></div>
     </div>
-    <div  style="font-family: 'Poppins', sans-serif;" id="cardcontainer">
-        <p1 id="status">No Todos</p1>
-     
-
-    
-    </div>
-    
-    <div>
-    <img src="https://www.researchgate.net/profile/Arjumand-Warsy-2/publication/6437262/figure/tbl1/AS:601598342488065@1520443630443/Body-mass-index-BMI-in-normal-males-and-females-of-different-groups-BMI-male-BMI.png"></img>
-    </div>
-
+	<script src="main.js"></script>
 </body>
-<script src="./script.js"></script>
 </html>
+
